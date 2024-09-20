@@ -21,29 +21,34 @@ h1 {
 
 .container {
   width: 90vw;
-  margin: 2rem auto;
+  margin: 5rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .card {
-  height: 45rem;
-  width: 35rem;
+  height: 55rem;
+  width: 45rem;
   border: 7px solid rgb(248, 152, 152);
   border-radius: 10px;
   display: flex;
-  margin: 6rem 0;
+  margin: 10rem 0;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: antiquewhite;
-  box-shadow: 15px 15px 8px indianred;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  filter: drop-shadow(15px 15px 5px indianred);
+  transform: scale(1.1) translateY(15px);
 }
 
 .card-img {
   width: 100%;
-  height: 50%;
+  height: 70%;
   object-fit: cover;
 }
 
@@ -54,3 +59,5 @@ h1 {
 .card-price {
   margin-bottom: 1.2rem;
 }
+
+

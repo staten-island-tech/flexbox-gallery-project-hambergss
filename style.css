@@ -1,3 +1,18 @@
+:root {
+  --primary-color: indianred;
+  --secondary-color: cornsilk;
+  --shadow-color: rgb(143, 43, 43);
+  --border-color: rgb(248, 152, 152);
+  --hover-shadow-color: rgb(205, 92, 92);
+  --button-bg-color: rgb(224, 255, 255);
+  --button-border-color: rgb(240, 128, 128);
+  --button-hover-bg: rgb(255, 182, 193);
+  --card-bg-color: rgb(250, 235, 215);
+  --tablet-bg-color: rgb(224, 255, 255);
+  --desktop-bg-color: rgb(224, 255, 255);
+  --mobile-bg-color: rgb(224, 255, 255);
+}
+
 html {
   font-size: 1rem;
   box-sizing: border-box;
@@ -10,13 +25,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: indianred;
-  background-color: cornsilk;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
+
 h1 {
   font-size: 10rem;
   text-align: center;
-  text-shadow: 8px 10px 7px rgb(143, 43, 43);
+  text-shadow: 8px 10px 7px var(--shadow-color);
 }
 
 .container {
@@ -30,19 +46,19 @@ h1 {
 .card {
   height: 40rem;
   width: 30%;
-  border: 7px solid rgb(248, 152, 152);
+  border: 7px solid var(--border-color);
   border-radius: 10px;
   display: flex;
   margin: 5rem 0;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(250, 235, 215);
+  background-color: var(--card-bg-color);
   transition: all 0.3s;
 }
 
 .card:hover {
-  filter: drop-shadow(5px 5px 20px rgb(205, 92, 92));
+  filter: drop-shadow(5px 5px 20px var(--hover-shadow-color));
   transform: scale(1.05) translateY(10px);
 }
 
@@ -61,13 +77,15 @@ h1 {
 }
 
 .akkobtn {
-  width: 30px;
-  height: 44px;
+  width: 40%;
+  height: 20%;
   background-color: rgb(224, 255, 255);
-  border:2px solid rgb(240, 128, 128);
+  border: 2px solid rgb(240, 128, 128);
   border-radius: 10px;
   color: rgb(205, 92, 92);
   cursor: pointer;
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 .akkobtn:hover {
@@ -83,14 +101,33 @@ h1 {
 
 @media (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 
-/*Desktop (large screen) */
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 400px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Desktop (large screen) */
+@media (min-width: 1024px) {
   body {
     background-color: rgb(224, 255, 255);
   }
 }
 
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    background-color: rgb(144, 238, 144);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  body {
+    background-color: rgb(240, 128, 128);
+  }
+}

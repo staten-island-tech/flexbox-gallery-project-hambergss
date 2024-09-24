@@ -1,12 +1,12 @@
 html {
-  font-size: 10px;
+  font-size: 1rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-size: 12px;
+  font-size: 1rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,36 +14,36 @@ body {
   background-color: cornsilk;
 }
 h1 {
-  font-size: 150px;
+  font-size: 10rem;
   text-align: center;
-  text-shadow: 8px 10px 5px rgb(143, 43, 43);
+  text-shadow: 8px 10px 7px rgb(143, 43, 43);
 }
 
 .container {
-  width: 90vw;
-  margin: 5rem auto;
+  width: 85vw;
+  margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .card {
-  height: 55rem;
-  width: 45rem;
+  height: 40rem;
+  width: 30%;
   border: 7px solid rgb(248, 152, 152);
   border-radius: 10px;
   display: flex;
-  margin: 10rem 0;
+  margin: 5rem 0;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: antiquewhite;
+  background-color: rgb(250, 235, 215);
   transition: all 0.3s;
 }
 
 .card:hover {
-  filter: drop-shadow(15px 15px 5px indianred);
-  transform: scale(1.1) translateY(15px);
+  filter: drop-shadow(5px 5px 20px rgb(205, 92, 92));
+  transform: scale(1.05) translateY(10px);
 }
 
 .card-img {
@@ -61,15 +61,36 @@ h1 {
 }
 
 .akkobtn {
-  width: 20px;
-  height: 10px;
-  background-color: lightcyan;
-  border:2px solid lightcoral;
+  width: 30px;
+  height: 44px;
+  background-color: rgb(224, 255, 255);
+  border:2px solid rgb(240, 128, 128);
   border-radius: 10px;
-  color: indianred;
+  color: rgb(205, 92, 92);
   cursor: pointer;
 }
 
 .akkobtn:hover {
-  background-color: lightpink;
+  background-color: rgb(255, 182, 193);
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/*Desktop (large screen) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    background-color: rgb(224, 255, 255);
+  }
+}
+

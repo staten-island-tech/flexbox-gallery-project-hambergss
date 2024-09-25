@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-size: 2vw;
+  font-size: 1rem;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,13 +27,13 @@ body {
 }
 
 h1 {
-  font-size: 2vw;
+  font-size: 1rem;
   text-align: center;
   text-shadow: 8px 10px 7px var(--shadow-color);
 }
 
 .spin {
-  font-size: 10vw;
+  font-size: 8rem;
   transition: transform 0.5s; /* Smooth transition */
 }
 

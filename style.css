@@ -53,7 +53,6 @@ h1 {
   background-color: var(--card-bg-color);
   transition: all 0.3s;
   text-align: center;
-  transform: scale(1.2) translateY(10px);
   transform: scale(0.8);
   opacity: 0;
   animation: fadeIn 1s ease forwards;

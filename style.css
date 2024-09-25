@@ -53,6 +53,7 @@ h1 {
   background-color: var(--card-bg-color);
   transition: all 0.3s;
   text-align: center;
+  transform: scale(1.2) translateY(10px);
   transform: scale(0.8);
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -106,6 +107,7 @@ h1 {
   font-size: 1.4rem;
   transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease, color 0.4s ease;
   opacity: 0.9; /* Slight transparency initially */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Initial subtle shadow */
 }
 
 .akkobtn::after {

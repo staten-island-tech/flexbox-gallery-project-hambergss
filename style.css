@@ -52,6 +52,25 @@ h1 {
   justify-content: space-around;
   background-color: var(--card-bg-color);
   transition: all 0.3s;
+  text-align: center;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  50% {
+      opacity: 0.5;
+      transform: scale(1.05);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
 }
 
 .card:hover {
@@ -60,10 +79,12 @@ h1 {
 }
 
 .card-img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
-}
+  width: 100%; /* Make the image take up the full width of its container */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
+  margin: 1rem 0; /* Optional: Add some margin for spacing */
+  display: block; /* Ensures images behave consistently */
+}  
 
 .card-header {
   margin-top: 1.2rem;
@@ -74,33 +95,169 @@ h1 {
 }
 
 .akkobtn {
-  width: 40%;
-  height: 20%;
+  position: relative;
+  padding: 10px 20px;
+  text-align: center;
+  color: rgb(205, 92, 92);
   background-color: rgb(224, 255, 255);
   border: 2px solid rgb(240, 128, 128);
   border-radius: 10px;
-  color: rgb(205, 92, 92);
   cursor: pointer;
-  text-align: center;
   font-size: 1.4rem;
+  transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+  opacity: 0.9; /* Slight transparency initially */
+}
+
+.akkobtn::after {
+  content: ''; /* The pseudo-element will serve as the underline */
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start from the center */
+  width: 0; /* Initially, the width is zero */
+  height: 4px; /* Thickness of the underline */
+  background-color: rgb(92, 158, 205); /* Color of the underline */
+  transition: width 0.6s ease, left 0.6s ease; /* Animation on width and position */
+}
+
+.akkobtn:hover::after {
+  width: 100%; /* Expand the underline to full width */
+  left: 0; /* Move the starting position to the left, creating the center-out effect */
 }
 
 .akkobtn:hover {
-  background-color: rgb(255, 182, 193);
+  transform: translateY(-5px); /* Move the button slightly upwards */
+  opacity: 1; /* Full opacity on hover */
+  background-color: rgb(255, 182, 193); /* Optional background color change */
+  color: white; /* Text color change for contrast */
 }
 
-@media screen and (max-width: 1200px) {
+/* for desktops */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.2rem; /* Larger font for readability on large screens */
+  }
+
+  h1 {
+    font-size: 9rem; /* Increase heading size for large displays */
+    text-shadow: 10px 12px 8px var(--shadow-color); /* Larger shadow for bigger headings */
+  }
+
+  .container {
+    width: 75%; /* Reduce container width to keep content centered */
+    flex-direction: row; /* Content remains in a row */
+    justify-content: space-between; /* Space items evenly */
+  }
+
   .card {
-    width: 45%;
+    width: 22%;
+    height: 42% auto; /* Flexible height */
+    margin: 3.5rem auto; /* Increased margin between cards */
+  }
+
+  .card-img {
+    height: 300px; /* Larger image size for bigger screens */
+  }
+
+  .akkobtn {
+    width: 60%; /* Larger buttons for desktop interaction */
+    font-size: 1.6rem; /* Larger font for better readability */
   }
 }
 
-@media screen and (max-width: 600px) {
+/* for ipad pro */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  body {
+    font-size: 1.1rem; /* Slightly larger font size for better readability on larger screens */
+  }
+
+  h1 {
+    font-size: 8rem; /* Larger heading size for bigger screens */
+    text-shadow: 7px 8px 6px var(--shadow-color); /* Adjusted shadow for larger headings */
+  }
+
+  .container {
+    width: 80%; /* Reduce container width to prevent content from stretching */
+    flex-direction: row; /* Keep content in rows */
+    justify-content: space-between; /* Space content evenly */
+  }
+
   .card {
-    width: 100%;
+    width: 30%; /* Allow three cards per row */
+    height: auto; /* Auto-adjust card height */
+    margin: 2rem auto; /* Adjust margins for better spacing */
+  }
+
+  .card-img {
+    height: 240px; /* Adjust image height to fit nicely within larger cards */
+  }
+
+  .akkobtn {
+    width: 60%; /* Larger button for easier interaction */
+    font-size: 1.5rem; /* Increase button font size */
+  }
+}
+
+/* for ipads */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  body {
+    font-size: 1rem; /* Maintain standard font size */
+  }
+
+  h1 {
+    font-size: 6rem; /* Adjust the heading size for iPad screens */
+    text-shadow: 6px 7px 5px var(--shadow-color); /* Reduce shadow size */
+  }
+
+  .container {
+    width: 80%; /* Make the container more narrow to fit */
+    flex-direction: row; /* Keep items in a row, suitable for landscape mode */
+    justify-content: space-around; /* Distribute items evenly */
+  }
+
+  .card {
+    width: 45%; /* Allow two cards per row on an iPad */
+    height: auto; /* Let height adjust based on content */
+    margin: 1rem auto; /* Adjust margins for better spacing */
+  }
+
+  .card-img {
+    height: 180px; /* Smaller image size for tablets */
+  }
+
+  .akkobtn {
+    width: 60%; /* Slightly larger buttons */
+    font-size: 1.3rem; /* Increase button font size slightly */
+  }
+}
+
+/* for phoines */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.9rem; /* Adjusted font size for smaller screens */
+  }
+
+  h1 {
+    font-size: 3rem; /* Reduce size for headlines */
+    text-shadow: 4px 5px 3px var(--shadow-color); /* Smaller shadow */
   }
   .container {
     flex-direction: column;
+    width: 100%; /* Full-width container for mobile */
+    margin: 1rem auto; /* Less margin */
   }
-}
+  .card {
+    width: 70%;
+    height: 25rem;
+    margin: 1rem auto; /* Reduce margin for mobile */
+    padding: 0.9rem;
+  }
+  .card-img {
+    height: 150px; /* Smallest image size for mobile */
+  }
+  .akkobtn {
+    width: 80%; /* Make buttons more prominent */
+    height: auto; /* Let the height adjust naturally */
+    font-size: 1.2rem; /* Slightly smaller font for buttons */
+  }
 
+}

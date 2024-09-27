@@ -11,14 +11,14 @@
 }
 
 html {
-  font-size: 1rem
+  font-size: 10px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-size: 1rem;
+  font-size: 10px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
   text-shadow: 8px 10px 7px var(--shadow-color);
 }
@@ -60,7 +60,7 @@ h1 {
 
 .card {
   height: 40rem;
-  width: 30%;
+  width: 27rem;
   border: 7px solid var(--border-color);
   border-radius: 10px;
   display: flex;
@@ -98,7 +98,7 @@ h1 {
 
 .card-img {
   width: 100%; /* Make the image take up the full width of its container */
-  height: 200px; /* Set a fixed height for all images */
+  height: 38%; /* Set a fixed height for all images */
   object-fit: cover; /* Ensures the image covers the area while maintaining its aspect ratio */
   margin: 1rem 0; /* Optional: Add some margin for spacing */
   display: block; /* Ensures images behave consistently */
@@ -169,8 +169,8 @@ h1 {
   }
 
   .card {
-    width: 22%;
-    height: 42% auto; /* Flexible height */
+    width: 23%;
+    height: 30%; /* Flexible height */
     margin: 3.5rem auto; /* Increased margin between cards */
   }
 
@@ -236,7 +236,7 @@ h1 {
 
   .card {
     width: 45%; /* Allow two cards per row on an iPad */
-    height: auto; /* Let height adjust based on content */
+    height: 40rem; /* Let height adjust based on content */
     margin: 1rem auto; /* Adjust margins for better spacing */
   }
 
@@ -267,12 +267,12 @@ h1 {
   }
   .card {
     width: 70%;
-    height: 25rem;
+    height: 35rem;
     margin: 1rem auto; /* Reduce margin for mobile */
     padding: 0.9rem;
   }
   .card-img {
-    height: 150px; /* Smallest image size for mobile */
+    height: 60%; /* Smallest image size for mobile */
   }
   .akkobtn {
     width: 80%; /* Make buttons more prominent */

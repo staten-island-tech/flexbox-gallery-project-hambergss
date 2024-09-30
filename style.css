@@ -60,7 +60,7 @@ h1 {
 
 .card {
   height: 40rem;
-  width: 27rem;
+  width: 30rem;
   border: 7px solid var(--border-color);
   border-radius: 10px;
   display: flex;
@@ -169,17 +169,17 @@ h1 {
   }
 
   .card {
-    width: 23%;
-    height: 30%; /* Flexible height */
+    width: 22%;
+    height: 55rem; 
     margin: 3.5rem auto; /* Increased margin between cards */
   }
 
   .card-img {
-    height: 300px; /* Larger image size for bigger screens */
+    height: 280px; /* Larger image size for bigger screens */
   }
 
   .akkobtn {
-    width: 60%; /* Larger buttons for desktop interaction */
+    width: 50%; /* Larger buttons for desktop interaction */
     font-size: 1.6rem; /* Larger font for better readability */
   }
 }
@@ -203,7 +203,7 @@ h1 {
 
   .card {
     width: 30%; /* Allow three cards per row */
-    height: auto; /* Auto-adjust card height */
+    height: 45rem; /* Auto-adjust card height */
     margin: 2rem auto; /* Adjust margins for better spacing */
   }
 
